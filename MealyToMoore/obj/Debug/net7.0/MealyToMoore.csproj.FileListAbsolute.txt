@@ -1,0 +1,14 @@
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\bin\Debug\net7.0\MealyToMoore.exe
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\bin\Debug\net7.0\MealyToMoore.deps.json
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\bin\Debug\net7.0\MealyToMoore.runtimeconfig.json
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\bin\Debug\net7.0\MealyToMoore.dll
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\bin\Debug\net7.0\MealyToMoore.pdb
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\obj\Debug\net7.0\MealyToMoore.GeneratedMSBuildEditorConfig.editorconfig
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\obj\Debug\net7.0\MealyToMoore.AssemblyInfoInputs.cache
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\obj\Debug\net7.0\MealyToMoore.AssemblyInfo.cs
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\obj\Debug\net7.0\MealyToMoore.csproj.CoreCompileInputs.cache
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\obj\Debug\net7.0\MealyToMoore.dll
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\obj\Debug\net7.0\refint\MealyToMoore.dll
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\obj\Debug\net7.0\MealyToMoore.pdb
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\obj\Debug\net7.0\MealyToMoore.genruntimeconfig.cache
+D:\CODING\C-Projects\SmartHome\AutomatsTheory\MealyToMoore\obj\Debug\net7.0\ref\MealyToMoore.dll
