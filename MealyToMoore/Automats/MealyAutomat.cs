@@ -1,4 +1,6 @@
-﻿namespace MealyToMoore.Automats;
+﻿using MealyToMoore.Graph;
+
+namespace MealyToMoore.Automats;
 
 public class MealyAutomat : IAutomatData
 {
@@ -8,9 +10,9 @@ public class MealyAutomat : IAutomatData
     
     private const string SplitChar = ";";
 
-    public List<Node> GetNodes()
+    public Graph.Graph GetGraph()
     {
-        List<Node> nodes = new List<Node>();
+        List<Node> transactions = new List<Node>();
         
         for ( int line = 0; line < TransitionFunctions.Count; line++ )
         {
@@ -25,7 +27,7 @@ public class MealyAutomat : IAutomatData
                 string toState = transactionArgs[ 0 ];
                 string outputSignal = transactionArgs[ 1 ];
                 
-                nodes.Add( new Node
+                transactions.Add( new Node
                 {
                     From = state,
                     To = toState,
@@ -34,7 +36,11 @@ public class MealyAutomat : IAutomatData
             }
         }
         
-        return nodes;
+        return new Graph.Graph
+        {
+            Nodes = States.Select( x => new Node { From = x, To = x } ).ToList(),
+            Transactions = transactions
+        };
     }
 
     public string GetCsvData()

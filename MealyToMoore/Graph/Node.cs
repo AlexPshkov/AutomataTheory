@@ -1,4 +1,4 @@
-namespace MealyToMoore;
+namespace MealyToMoore.Graph;
 
 public class Node
 {

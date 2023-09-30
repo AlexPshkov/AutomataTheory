@@ -19,15 +19,12 @@ internal static class Program
         string sourceFilePath = args[1];
         string destinationFilePath = args[2];
 
-        (IAutomatData inputAutomat, IAutomatData outputAutomat) automats = GetAutomats( conversionType, sourceFilePath );
+        (IAutomatData inputAutomat, IAutomatData outputAutomat) automats = Process( conversionType, sourceFilePath );
         
         PrintDataToFile( automats.outputAutomat.GetCsvData(), destinationFilePath );
-        
-        GraphVisualizer.Visualize( automats.inputAutomat.GetNodes(), "./input_graph.png" );
-        GraphVisualizer.Visualize( automats.outputAutomat.GetNodes(), "./output_graph.png" );
     }
 
-    private static (IAutomatData inputAutomat, IAutomatData outputAutomat) GetAutomats( string conversionType, string sourceFilePath )
+    private static (IAutomatData inputAutomat, IAutomatData outputAutomat) Process( string conversionType, string sourceFilePath )
     {
         IAutomatData inputAutomat;
         IAutomatData outputAutomat;
@@ -41,6 +38,9 @@ internal static class Program
 
                 inputAutomat = mealyAutomat;
                 outputAutomat = convertedMoore;
+
+                GraphVisualizer.VisualizeMealy( mealyAutomat.GetGraph(), "./input_graph.png" );
+                GraphVisualizer.VisualizeMoore( convertedMoore.GetGraph(), "./output_graph.png" );
                 break;
             case MooreToMealyConversionType:
                 MooreAutomat mooreAutomat = automatReader.ReadMooreAutomat( sourceFilePath );
@@ -48,6 +48,9 @@ internal static class Program
                 
                 inputAutomat = mooreAutomat;
                 outputAutomat = convertedMealy;
+                
+                GraphVisualizer.VisualizeMoore( mooreAutomat.GetGraph(), "./input_graph.png" );
+                GraphVisualizer.VisualizeMealy( convertedMealy.GetGraph(), "./output_graph.png" );
                 break;
             default:
                 throw new ArgumentException( "Unavailable conversion type" );
